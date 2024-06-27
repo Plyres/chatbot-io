@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot CBM</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--Header qui contient le nom du chat, le pseudo de l'utilisateur et l'avatar de l'utilisateur-->
+<div class="header">
+    <img src="https://via.placeholder.com/50" alt="User Avatar" class="avatar" id="user-avatar">
+    <div class="user-info">
+        <span id="user-name">User Name</span>
+    </div>
+    <span class="chatbot-name">Culture Chatbot</span>
+</div>
+<div class="row">
+    <div class="col s12 m4" id="bot-list">
+        <!-- Liste des bots qui sont déclarés et ajoutés grâce à js -->
+    </div>
+    <div class="col s12 m8">
+        <div id="chat-window" class="card">
+            <div id="chat-content" class="card-content">
+                <!-- Historique des messages qui sont ajouté en JS et stocké dans le local storage-->
+            </div>
+        </div>
+        <form id="chat-form" class="mt-2">
+            <div class="input-field col s10">
+                <input type="text" id="user-input" placeholder="Type a message...">
+            </div>
+            <button type="submit" class="btn waves-effect waves-light col s2">Send</button>
+        </form>
+    </div>
+</div>
+
+<!--Liaison à un script JS de material design-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--Liaison aux scripts JS utilisé pour le chat et les bots-->
+<script src="main.js"></script>
+<script src="bot.js"></script>
+<script src="localStorage.js"></script>
+<script src="api.js"></script>
+</body>
+</html>
