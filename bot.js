@@ -21,8 +21,8 @@ const bots = [
         avatar: './image/videoGameBotAvatar.png',
         description: 'I will give you information on video games',
         botCommands: {
-            'help': '<b>Commands:</b> help, hi, game gameName',
-            'hi': 'Hi there fellow gamer ! I can give you the name, release date and released platforms of a game',
+            'help': '<b>Commands:</b> help, greetings, game gameName',
+            'greetings': 'Greetings fellow gamer ! I can give you the name, release date and released platforms of a game',
             'game': async (gameName) => {
                 const gameInfo = await fetchGameInfo(gameName);
 
@@ -39,8 +39,8 @@ const bots = [
         avatar: './image/movieBotAvatar.png',
         description: 'I will give you information on movies',
         botCommands: {
-            'help': '<b>Commands:</b> help, greetings, movie movieName',
-            'greetings': 'Greetings movie enjoyer ! I can give you the name, release date and plot of a film',
+            'help': '<b>Commands:</b> help, hi, movie movieName',
+            'hi': 'Hi there movie enjoyer ! I can give you the name, release date and plot of a film',
             'movie': async (movieTitle) => {
                 const response = await fetch(`http://www.omdbapi.com/?t=${movieTitle}&apikey=3b181e07`);
                 const movieInfo = await response.json();

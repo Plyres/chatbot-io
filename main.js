@@ -34,7 +34,7 @@ function initializeChat() {
         const userMessage = userInput.value.trim();
         if (userMessage) {
             addMessageToChat(userMessage, 'user-message', user.name, user.avatar);
-            handleBotResponses(userMessage).then(r => console.log("Message has been sent"));
+            handleBotResponses(userMessage);
             userInput.value = '';
         }
     });
